@@ -108,7 +108,7 @@ export default function Rightbar({ user }) {
               <img className="rightbarAd" src={`${PF}2.jpg`} alt="img" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="rightbarAd" src={`${PF}3.jpg`} alt="img" />
+              <img className="rightbarAd" src={`${PF}ad.jpg`} alt="img" />
             </SwiperSlide>
             <SwiperSlide>
               <img className="rightbarAd" src={`${PF}5.jpg`} alt="img" />
