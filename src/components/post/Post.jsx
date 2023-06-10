@@ -65,7 +65,7 @@ export default function Post({ post, postId }) {
             <img
               className="postProfileImg"
               src={
-                user.profilePicture ? PF + user.profilePicture : PF + "user.img"
+                user.profilePicture ? PF + user.profilePicture : PF + "userimg.jpg"
               }
               alt="img"
             />
