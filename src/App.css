@@ -1,0 +1,24 @@
+@media only screen and (orientation: portrait) {
+  body {
+    background-color: aquamarine;
+  }
+  #turn {
+    display: block;
+    color: rgb(12, 93, 74);
+    padding: 40px;
+    margin-top: 30%;
+    font-size: 20px;
+  }
+  #container {
+    display: none;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  #turn {
+    display: none;
+  }
+  #container {
+    display: block;
+  }
+}

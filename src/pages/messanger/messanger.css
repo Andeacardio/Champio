@@ -1,0 +1,116 @@
+.messenger {
+  height: calc(100vh-70px);
+  display: flex;
+}
+.chatMenu {
+  flex: 3.5;
+}
+.chatBox {
+  flex: 5.5;
+}
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.chatBoxTop {
+  height: 65vh;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+.chatBoxBottom {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatMessageInput {
+  width: 80%;
+  height: 90px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.chatSubmitButton {
+  width: 90px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(23, 96, 109);
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.chatSubmitButton:hover {
+  background-color: rgb(62, 168, 172);
+  transition: 0.3s;
+}
+.chatOnline {
+  flex: 3;
+}
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  padding: 10px;
+}
+.chatMenuInput {
+  width: 80%;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.noConversation {
+  position: absolute;
+  color: aliceblue;
+  text-shadow: 1px 1px 5px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 5px #000;
+  -webkit-text-shadow: 0 0 5px #000;
+  margin-top: 80px;
+  font-size: 40px;
+  text-align: center;
+}
+.chatMenuText {
+  display: flex;
+  margin: 30px;
+  font-size: 20px;
+}
+.chatOnlineTitle {
+  margin: 30px;
+  display: flex;
+  font-size: 20px;
+}
+.chatMenuConversation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.3s;
+}
+.chatMenuConversation:hover {
+  background-color: rgb(183, 193, 194);
+  transition: 0.3s;
+}
+.chatMenuItem {
+  width: 80%;
+  position: relative;
+}
+.chatMenuClose {
+  flex: 5%;
+}
+.chatMenuClose:hover {
+  color: red;
+}
+.chatBoxHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.chatBoxHeaderImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}

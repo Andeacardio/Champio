@@ -1,0 +1,94 @@
+.share {
+  width: 100%;
+
+  border-radius: 10px;
+  box-shadow: 0px 1px 16px -8px rgba(0, 0, 0, 0.68);
+}
+.shareProfileImg {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.shareWrapper {
+  padding: 10px;
+}
+.shareTop {
+  display: flex;
+  align-items: center;
+}
+.shareInput {
+  border: none;
+  width: 80%;
+}
+.shareInput:focus {
+  outline: none;
+}
+.shareHr {
+  margin: 20px;
+}
+.shareOptionsList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shareOptions {
+  display: flex;
+  margin-left: 20px;
+}
+@media (max-width: 900px) {
+  .shareOptions {
+    display: flex;
+    margin-left: 5px;
+    flex-wrap: wrap;
+  }
+}
+.shareOption {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.shareIcon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.shareOptionText {
+  font-size: 14px;
+  font-weight: 500;
+}
+.shareButton {
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: rgb(23, 96, 109);
+  color: white;
+  font-weight: 500;
+  margin-right: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.shareButton:hover {
+  color: rgb(23, 96, 109);
+  background-color: rgb(62, 168, 172);
+  transition: 0.5s;
+}
+.shareImgContainer {
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
+.shareImg {
+  width: 93%;
+  object-fit: cover;
+  padding: 10px;
+}
+.shareCancelImg {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}

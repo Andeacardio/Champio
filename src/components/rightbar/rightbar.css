@@ -1,0 +1,120 @@
+.rightbar {
+  flex: 3.5;
+}
+@media (max-width: 1030px) {
+  .rightbar {
+    max-width: 300px;
+  }
+}
+@media (max-width: 700px) {
+  .rightbar {
+    max-width: 200px;
+  }
+}
+.rightWrapper {
+  padding: 20px 20px 0px 30px;
+}
+.birthdayContainer {
+  display: flex;
+  align-items: center;
+}
+.birthdayImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.birthdayText {
+  font-weight: 300px;
+  font-size: 15px;
+}
+.birthdayText b {
+  cursor: pointer;
+}
+.rightbarAd {
+  width: 100%;
+  margin: 30px 0;
+}
+.rightbarTitle {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.swiperright {
+  max-width: 370px;
+  position: relative;
+  z-index: -1;
+  margin: 10px 10%;
+  cursor: pointer;
+}
+.mySwiper {
+  cursor: pointer;
+}
+.rightbarFriendList {
+  padding: 0;
+  margin: 0 0 0 30px;
+  list-style: none;
+}
+.rightbarTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.rightbarInfo {
+  margin-bottom: 70px;
+  margin-left: 30px;
+}
+.rightbarInfoItem {
+  margin-bottom: 10px;
+}
+.rightbarInfoKey {
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
+}
+.rightbarInfoValue {
+  font-weight: 300;
+}
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+}
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.rightbarFollowingImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px 20px 10px 10px;
+}
+.rightbarFollowingName {
+  margin: 5px 5px 5px 19px;
+}
+.rightbarFollowingLink {
+  text-decoration: none;
+  color: black;
+}
+.followers {
+  margin-top: 50px;
+}
+.rightbarFolloButton {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  border: none;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgb(23, 96, 109);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.rightbarFolloButton:hover {
+  background-color: rgb(62, 168, 172);
+  transition: 0.3s;
+}

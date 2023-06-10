@@ -1,0 +1,126 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .loginLeft,
+  .loginRight {
+    padding: 10px;
+  }
+  .loginLogo {
+    font-size: 20px !important;
+  }
+  .loginDesc {
+    font-size: 14px !important;
+  }
+  .loginInput {
+    height: 30px !important;
+    margin-bottom: 10px;
+    font-size: 14px !important;
+  }
+  .loginButton {
+    height: 30px !important;
+    font-size: 16px !important;
+  }
+  .loginRegisterButton {
+    font-size: 16px !important;
+    margin-top: -20px;
+    height: 30px !important;
+  }
+  .loginRegisterButton {
+    width: 170px !important;
+  }
+}
+.loginWrapper {
+  width: 70%;
+  height: 70%;
+  display: flex;
+}
+.loginLeft,
+.loginRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.loginLogo {
+  font-size: 50px;
+  font-weight: 800;
+  color: rgb(62, 168, 172);
+  margin-bottom: 10px;
+}
+.loginDesc {
+  font-size: 24px;
+}
+.loginBox {
+  height: 300px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2); */
+}
+.loginInput {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.loginInput:focus {
+  outline: none;
+}
+.loginButton {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(62, 168, 172);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+.loginButton:hover {
+  background-color: rgb(26, 97, 100);
+  transition: 0.5s;
+}
+.loginForgot {
+  text-align: center;
+  color: rgb(62, 168, 172);
+}
+.loginRegisterButton {
+  width: 60%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(26, 97, 100);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.loginRegisterButton:hover {
+  background-color: rgb(62, 168, 172);
+  transition: 0.5s;
+}
+.loginInputFirst {
+  margin-bottom: -60px;
+}
+.loginLeftLogoImg {
+  width: 100px;
+  margin-bottom: 20px;
+}

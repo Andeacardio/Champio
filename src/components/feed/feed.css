@@ -1,0 +1,13 @@
+.feed {
+  flex: 6;
+}
+@media (max-width: 1030px) {
+  .feed {
+    flex: 4;
+  }
+}
+@media (max-width: 800px) {
+  .feed {
+    max-width: 300px;
+  }
+}
