@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,7 +8,7 @@ import { Autoplay } from "swiper";
 import Online from "../online/Online";
 import axios from "axios";
 import { AuthContex } from "../../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -18,6 +18,14 @@ export default function Rightbar({ user }) {
   const { user: currentUser, dispatch } = useContext(AuthContex);
   const r = user ? user._id : currentUser._id;
   const [followed, setFollowed] = useState(false);
+  const [info, setInfo] = useState(true);
+
+  const desc = useRef();
+  const city = useRef();
+  const from = useRef();
+  const relationship = useRef();
+  // const mail = useRef();
+  // const phone = useRef();
 
   useEffect(() => {
     setFollowed(currentUser.followings.includes(user?._id));
@@ -79,6 +87,28 @@ export default function Rightbar({ user }) {
     setFollowed(!followed);
   };
 
+  const handleClickInfo = async (e) => {
+    e.preventDefault();
+    const newInfo = {
+      userId: currentUser._id,
+      desc: desc.current.value,
+      city: city.current.value,
+      from: from.current.value,
+      relationship: relationship.current.value,
+    };
+    try {
+      await axios.put(
+        "https://socialmedia-rest-api.onrender.com/api/users/" +
+          currentUser._id,
+        newInfo
+      );
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+    setInfo(!info);
+  };
+
   const HomeRightbar = () => {
     return (
       <>
@@ -136,26 +166,91 @@ export default function Rightbar({ user }) {
           </button>
         )}
         <h4 className="rightbarTitle">User Information</h4>
-        <div className="rightbarInfo">
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City:</span>
-            <span className="rightbarInfoValue">{user.city}</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">From:</span>
-            <span className="rightbarInfoValue">{user.from}</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
+        {info ? (
+          <div className="rightbarInfo">
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">City:</span>
+              <span className="rightbarInfoValue">{user.city}</span>
+            </div>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">From:</span>
+              <span className="rightbarInfoValue">{user.from}</span>
+            </div>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">Relationship:</span>
+              <span className="rightbarInfoValue">
+                {user?.relationship === 1 ? "Single" : "Married"}
+              </span>
+            </div>
+            {/*<div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Email:</span>
             <span className="rightbarInfoValue">
-              {user.relationship === 1
-                ? "Single"
-                : user.relationship === 1
-                ? "Married"
-                : "-"}
+              {user.mail ? user.mail : "-"}
             </span>
           </div>
-        </div>
+          <div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Phone:</span>
+            <span className="rightbarInfoValue">
+              {user.phone ? user.phone : "-"}
+            </span>
+          </div>*/}
+          </div>
+        ) : (
+          <form className="rightbarInfo" onSubmit={handleClickInfo}>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">Description:</span>
+              <input className="rightbarInfoValueInput" required ref={desc} />
+            </div>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">City:</span>
+              <input className="rightbarInfoValueInput" required ref={city} />
+            </div>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">From:</span>
+              <input className="rightbarInfoValueInput" required ref={from} />
+            </div>
+            <div className="rightbarInfoItem">
+              <label className="rightbarInfoKey" for="relationship">
+                Relationship :
+              </label>
+              <select
+                id="relationship"
+                name="relationship"
+                className="rightbarInfoKey"
+                ref={relationship}
+              >
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+              </select>
+            </div>
+
+            {/*<div className="rightbarInfoItem">
+            <span className="rightbarInfoKey">Email:</span>
+            <input className="rightbarInfoValueInput" ref={mail}/>
+            
+            </div>
+            <div className="rightbarInfoItem">
+              <span className="rightbarInfoKey">Phone:</span>
+              <input className="rightbarInfoValueInput" ref={phone}/>
+            </div>*/}
+
+            <button
+              className="changeInformationButton InformationSend"
+              type="submit"
+            >
+              Send Information
+            </button>
+          </form>
+        )}
+
+        {user.username === currentUser.username && (
+          <button
+            className="changeInformationButton"
+            onClick={() => setInfo(!info)}
+          >
+            Change information
+          </button>
+        )}
         <h4 className="rightbarTitle">Followings</h4>
         <div className="rightbarFollowings">
           {friends.map((friend) => (
