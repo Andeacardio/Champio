@@ -118,3 +118,27 @@
   background-color: rgb(62, 168, 172);
   transition: 0.3s;
 }
+.rightbarInfoValueInput {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+.changeInformationButton {
+  background-color: rgb(62, 168, 172);
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+  font-weight: bold;
+  font-size: 14px;
+  color: aliceblue;
+  border: none;
+  margin: -25px 0px 25px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.changeInformationButton:hover {
+  background-color: rgb(23, 96, 109);
+  transition: 0.3s;
+}
+.InformationSend {
+  margin: 20px 0px 0px 0px;
+}
