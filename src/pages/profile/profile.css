@@ -32,6 +32,32 @@
   margin: auto;
   z-index: 4;
 }
+.UserPhotoAdd {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  z-index: 5;
+  width: 100%;
+  margin: auto;
+}
+.shareOptionUserPhoto {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgb(23, 129, 132);
+  padding: 5px 5px 10px 10px;
+  font-size: 25px;
+  margin-left: 130px;
+  margin-top: -20px;
+  color: aliceblue;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.shareOptionUserPhoto:hover {
+  background-color: rgba(23, 128, 132, 0.758);
+  transition: 0.3s;
+}
 .profileInfo {
   display: flex;
   flex-direction: column;
@@ -49,4 +75,59 @@
 }
 .profileRightBottom {
   display: flex;
+}
+.shareImgProfile {
+  width: 280px;
+  margin: 30px auto 0;
+  background-color: rgb(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 80px;
+  left: 45%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.shareImgIcon {
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.uploadButton {
+  background-color: rgb(23, 129, 132);
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+.uploadButton:hover {
+  background-color: rgba(23, 128, 132, 0.776);
+  transition: 0.3s;
+}
+.CanselPhoto {
+  color: aliceblue;
+  margin-top: 20px;
+}
+.forCoverPicture {
+  margin-top: -70px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  background-color: rgb(70, 177, 141, 0.376);
+}
+.filesImg {
+  max-width: 500px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.filesContainer {
+  width: 400px;
 }
