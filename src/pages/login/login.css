@@ -50,7 +50,7 @@
 }
 
 .loginLogo {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 800;
   color: rgb(62, 168, 172);
   margin-bottom: 10px;
@@ -59,7 +59,7 @@
   font-size: 24px;
 }
 .loginBox {
-  height: 300px;
+  height: 350px;
   padding: 20px;
   background-color: aliceblue;
   border-radius: 10px;
@@ -74,6 +74,7 @@
   border: 1px solid gray;
   font-size: 18px;
   padding-left: 20px;
+  margin-button:10px;
 }
 .loginInput:focus {
   outline: none;
