@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 10px;
 }
 
 .loginLogo {
@@ -81,7 +81,7 @@
   outline: none;
 }
 .loginButton {
-  height: 50px;
+  height: 35px;
   border-radius: 10px;
   border: none;
   background-color: rgb(62, 168, 172);
