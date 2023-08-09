@@ -50,7 +50,7 @@
 }
 
 .loginLogo {
-  font-size: 35px;
+  font-size: 35px ;
   font-weight: 800;
   color: rgb(62, 168, 172);
   margin-bottom: 10px;
@@ -60,21 +60,22 @@
 }
 .loginBox {
   height: 350px;
-  padding: 20px;
+  padding: 10px;
   background-color: aliceblue;
   border-radius: 10px;
   display: flex;
+  gap:10px;
   flex-direction: column;
   justify-content: space-between;
   /* box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2); */
 }
 .loginInput {
-  height: 50px;
+  height: 35px;
   border-radius: 10px;
   border: 1px solid gray;
   font-size: 18px;
   padding-left: 20px;
-  margin-button:10px;
+  margin-bottom: 20px;
 }
 .loginInput:focus {
   outline: none;
